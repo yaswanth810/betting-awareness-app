@@ -1,0 +1,31 @@
+.cyberpunk-heading {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    color: #00f0ff;
+    text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+    margin-bottom: 20px;
+  }
+  
+  .cyberpunk-card {
+    transition: all 0.3s ease-in-out;
+  }
+  .cyberpunk-heading {
+    font-family: 'Orbitron', sans-serif;
+    color: #00f0ff;
+    text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff88;
+  }
+  
+  .cyberpunk-card {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  @media (max-width: 600px) {
+    .cyberpunk-heading {
+      font-size: 1.8rem;
+    }
+  
+    .cyberpunk-card {
+      margin-bottom: 20px;
+    }
+  }
+  

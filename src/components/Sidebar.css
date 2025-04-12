@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .MuiDrawer-paper {
+    transition: width 0.3s ease;
+  }
+  
+  .MuiButton-root:hover {
+    transition: all 0.2s ease;
+  }
+  

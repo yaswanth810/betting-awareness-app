@@ -1,0 +1,78 @@
+.emergency-support-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 2rem;
+    background: rgba(10, 10, 25, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 0 20px #0ff;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .neon-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #0ff;
+    text-shadow: 0 0 8px #0ff;
+    margin-bottom: 1.5rem;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 100px;
+    background: #121232;
+    border: 2px solid #0ff;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  select {
+    width: 100%;
+    background: #121232;
+    color: #0ff;
+    padding: 0.7rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    border: 2px solid #0ff;
+  }
+  
+  .submit-btn {
+    background: #0ff;
+    color: #000;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background: #00f0ff;
+    box-shadow: 0 0 10px #0ff;
+  }
+  
+  .loading {
+    margin-top: 1rem;
+    text-align: center;
+    color: #0ff;
+    font-weight: bold;
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+  
+  .neon-card {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #181833;
+    border: 1px solid #0ff;
+    border-radius: 10px;
+    box-shadow: 0 0 12px #0ff;
+  }
+  
