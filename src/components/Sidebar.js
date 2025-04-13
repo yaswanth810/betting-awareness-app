@@ -40,7 +40,7 @@ const Sidebar = ({ darkMode }) => {
     { text: "Community Chat", path: "/community-chat", icon: <Chat /> },
     { text: "Companion AI", path: "/companion-ai", icon: <Psychology /> },
     { text: "Emergency Support", path: "/emergency-support", icon: <Support /> },
-
+    
     // 🛠️ Admin & Leaderboard Pages
    // { text: "Manage Influencers", path: "/admin/influencers", icon: <Settings /> },
    // { text: "Influencer Leaderboard", path: "/influencers/leaderboard", icon: <Leaderboard /> },
