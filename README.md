@@ -1,70 +1,133 @@
-# Getting Started with Create React App
+# Decentralized Betting Awareness Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A futuristic, cyberpunk-themed web application designed to combat illegal betting activities and support individuals struggling with gambling addiction. Built with cutting-edge technologies, this platform leverages blockchain, AI, and decentralized storage to ensure transparency, security, and accessibility.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+The Decentralized Betting Awareness Platform is a full-stack application that allows users to report illegal betting apps and influencers, access emergency support resources, and share experiences via decentralized video uploads. It also features a Companion AI chatbot for emotional support and an admin panel for managing content and influencers.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Illegal Betting Reporting**: Report illegal betting apps and influencers, with reports stored immutably on the blockchain (Sepolia testnet).
+- **Influencer Leaderboard**: Reputation scores for influencers decrease based on reports, promoting accountability.
+- **Companion AI Chatbot**: Provides motivational support and resources for gambling addiction recovery.
+- **Emergency Support**: Tailored resources and country-specific links for scam victims.
+- **Experience Sharing**: Upload and share videos via IPFS (Pinata) for decentralized storage.
+- **Awareness Articles**: Admins can upload articles (PDFs and media) to educate users.
+- **Admin Panel**: Manage influencers, content, and reports through a dedicated admin interface.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+### Frontend
+- **React.js** with **Material UI** for a sleek, cyberpunk-themed user interface.
+- **Framer Motion** for animations.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend
+- **FastAPI** for a robust and scalable API.
+- **MongoDB** for database management.
+- **IPFS** (via Pinata) for decentralized video storage.
+- **Web3.py** for blockchain interactions.
 
-### `npm run build`
+### Blockchain
+- **Solidity** smart contracts deployed on the **Sepolia testnet**.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+decentralized-betting-awareness/
+├── frontend/                # React.js frontend
+│   ├── src/
+│   │   ├── components/      # Reusable UI components
+│   │   ├── pages/           # Application pages
+│   │   ├── styles/          # CSS and theme files
+│   │   └── App.js           # Main React app
+│   └── public/              # Static assets
+├── backend/                 # FastAPI backend
+│   ├── app/
+│   │   ├── main.py          # API routes and logic
+│   │   ├── models.py        # Pydantic models
+│   │   ├── utils.py         # Utility functions
+│   │   └── contract_abi.json # Smart contract ABI
+│   └── requirements.txt     # Backend dependencies
+└── smart-contracts/         # Solidity contracts
+    ├── BettingAwareness.sol # Main contract
+    └── migrations/          # Deployment scripts
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+### Prerequisites
+- **Node.js** (v16 or higher)
+- **Python** (v3.9 or higher)
+- **MongoDB** (local or cloud instance)
+- **MetaMask** (for blockchain interactions)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/decentralized-betting-awareness.git
+   cd decentralized-betting-awareness
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Install frontend dependencies:
+   ```bash
+   cd frontend
+   npm install
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Install backend dependencies:
+   ```bash
+   cd ../backend
+   pip install -r requirements.txt
+   ```
 
-## Learn More
+4. Set up environment variables:
+   - Create a `.env` file in the `backend` directory with the following:
+     ```
+     ALCHEMY_API_URL=<your-alchemy-api-url>
+     PRIVATE_KEY=<your-private-key>
+     CONTRACT_ADDRESS=<deployed-contract-address>
+     MONGO_URI=<your-mongodb-uri>
+     HUGGINGFACE_API_TOKEN=<your-huggingface-api-token>
+     ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Running Locally
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Start the backend server:
+   ```bash
+   cd backend
+   uvicorn app.main:app --reload
+   ```
 
-### Code Splitting
+2. Start the frontend development server:
+   ```bash
+   cd frontend
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Open your browser and navigate to `http://localhost:3000`.
 
-### Analyzing the Bundle Size
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Frontend
+- Deployed via **Netlify**:
+  - Build command: `npm run build`
+  - Publish directory: `frontend/build`
 
-### Making a Progressive Web App
+### Backend
+- Deployed via **Render** or any hosting service:
+  - Start command: `uvicorn app.main:app`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributing
 
-### Advanced Configuration
+Contributions are welcome! Please follow these steps:
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature-name`.
+3. Commit your changes: `git commit -m "Add feature-name"`.
+4. Push to the branch: `git push origin feature-name`.
+5. Open a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## License
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
